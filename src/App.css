@@ -1,0 +1,89 @@
+.App {
+    padding-top: 110px;
+    padding-bottom: 40px;
+}
+
+.App > div {
+    display: flex;
+}
+
+.App div main {
+    width: calc(100% - 410px);
+    margin-right: 50px;
+}
+
+.searchResult {
+    margin-bottom: 32px;
+    overflow: auto;
+}
+
+.searchResult div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.searchResult div h1 {
+    color: var(--grey-100);
+    white-space: nowrap;
+    z-index: 1;
+}
+
+.searchResult div span {
+    color: var(--grey-50);
+}
+
+.searchResult div button {
+    white-space: nowrap;
+    z-index: 1;
+}
+
+.App div aside {
+    width: 360px;
+    min-width: 360px;
+}
+
+@media (max-width: 768px) {
+    .App {
+        padding-top: 155px;
+        padding-bottom: 15px;
+    }
+
+    .App > div {
+        display: block;
+    }
+
+    .App div main {
+        width: 100%;
+        position: relative;
+        inset: 0;
+        margin-right: 0;
+    }
+    .App div main::before {
+        content: "";
+        width: 25px;
+        height: 100%;
+        background: linear-gradient(90deg, var(--white), transparent);
+        position: absolute;
+        top: 0;
+        left: -13px;
+    }
+
+    .App div main::after {
+        content: "";
+        width: 25px;
+        height: 100%;
+        background: linear-gradient(270deg, var(--white), transparent);
+        position: absolute;
+        top: 0;
+        right: -13px;
+    }
+
+    .App div aside {
+        width: 100%;
+        min-width: unset;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+}
