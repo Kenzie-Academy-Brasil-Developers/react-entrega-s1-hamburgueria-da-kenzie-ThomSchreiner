@@ -1,4 +1,5 @@
 /* eslint-disable eqeqeq */
+import { toast } from "react-toastify"
 import { StyledButton } from "../../../styles/button"
 import { StyledCard } from "./style"
 
@@ -23,6 +24,7 @@ export function ProductsCard({ product, setCurrentSale }) {
                 return [...prevSales, { ...product, quantity: 1 }]
             }
         })
+        toast.success(`${product.name} adicionado ao carrinho`)
     }
 
     return (

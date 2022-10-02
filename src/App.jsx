@@ -6,6 +6,7 @@ import { api } from "./services/api"
 import { Container } from "./styles/container"
 import { CartList } from "./components/Cart/CartList"
 import { StyledButton } from "./styles/button"
+import "react-toastify/dist/ReactToastify.min.css"
 
 export function App() {
     const [products, setProducts] = useState([])
