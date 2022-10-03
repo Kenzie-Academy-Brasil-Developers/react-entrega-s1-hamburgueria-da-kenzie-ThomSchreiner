@@ -1,7 +1,7 @@
 /* eslint-disable eqeqeq */
 import { StyledCartItem } from "./style"
 import { HiTrash } from "react-icons/hi"
-import { GrFormSubtract, GrFormAdd } from "react-icons/gr"
+import { RiSubtractFill, RiAddFill } from "react-icons/ri"
 
 export function CartItem({ item, currentSale, setCurrentSale }) {
     function limitCaractere(string) {
@@ -59,11 +59,11 @@ export function CartItem({ item, currentSale, setCurrentSale }) {
                 </button>
                 <div>
                     <button onClick={decreseCartItem}>
-                        {item.quantity == 1 ? <HiTrash /> : <GrFormSubtract />}
+                        {item.quantity == 1 ? <HiTrash /> : <RiSubtractFill />}
                     </button>
                     <span className="text three">{item.quantity}</span>
                     <button onClick={increseCartItem}>
-                        <GrFormAdd />
+                        <RiAddFill />
                     </button>
                 </div>
             </div>

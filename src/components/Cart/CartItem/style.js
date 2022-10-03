@@ -52,6 +52,7 @@ export const StyledCartItem = styled.li`
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                color: var(--primary);
             }
         }
     }

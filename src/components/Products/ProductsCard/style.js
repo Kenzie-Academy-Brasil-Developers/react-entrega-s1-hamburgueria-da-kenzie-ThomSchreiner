@@ -20,7 +20,7 @@ export const StyledCard = styled.li`
         }
     }
 
-    div {
+    & > div {
         margin: 26px 20px 23px 20px;
         
         span {
@@ -31,6 +31,31 @@ export const StyledCard = styled.li`
         p {
             margin-bottom: 14px;
             color: var(--primary);
+        }
+
+        div {
+            width: 105px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-radius: 8px;
+            border: 2px solid var(--grey-20);
+
+            button {
+                width: 24px;
+                height: 24px;
+                font-size: 17px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: var(--primary);
+                background-color: transparent;
+            }
+
+            span {
+                margin: auto 0;
+            }
         }
     }
 

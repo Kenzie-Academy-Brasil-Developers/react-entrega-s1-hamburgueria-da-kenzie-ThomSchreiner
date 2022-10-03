@@ -56,10 +56,15 @@ export function App() {
                             <ProductsList
                                 products={filteredProducts}
                                 setCurrentSale={setCurrentSale}
+                                currentSale={currentSale}
                             />
                         </>
                     ) : (
-                        <ProductsList products={products} setCurrentSale={setCurrentSale} />
+                        <ProductsList
+                            products={products}
+                            setCurrentSale={setCurrentSale}
+                            currentSale={currentSale}
+                        />
                     )}
                 </main>
                 <aside>
