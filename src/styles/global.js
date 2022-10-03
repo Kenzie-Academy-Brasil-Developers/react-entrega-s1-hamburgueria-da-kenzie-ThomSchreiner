@@ -24,9 +24,8 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     :root {
-        --primary: #27AE60;
-        --primary-50: #93D7AF;
-        --secondary: #EB5757;
+        --primary: #ea1d2c;
+        --primary-50: #ea1d2c80;
         --grey-100: #333333;
         --grey-50: #828282;
         --grey-20: #E0E0E0;
