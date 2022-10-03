@@ -35,7 +35,7 @@ export function ProductsCard({ product, setCurrentSale }) {
             <div>
                 <h3 className="title three">{product.name}</h3>
                 <span className="text three">{product.category}</span>
-                <p className="text two">{normalizePrice(product.price)}</p>
+                <p className="text two bold">{normalizePrice(product.price)}</p>
                 <StyledButton height="medium" color="primary" type="button" onClick={addToCart}>
                     Adicionar
                 </StyledButton>

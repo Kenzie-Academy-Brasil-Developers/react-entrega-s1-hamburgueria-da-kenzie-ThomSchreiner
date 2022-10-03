@@ -30,6 +30,7 @@ export const StyledCard = styled.li`
         
         p {
             margin-bottom: 14px;
+            color: var(--primary);
         }
     }
 

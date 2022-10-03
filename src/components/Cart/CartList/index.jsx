@@ -19,19 +19,6 @@ export function CartList({ currentSale, setCurrentSale }) {
         }
     }, [currentSale])
 
-    function removeCartItem(itemId) {
-        const newSale = currentSale
-            .map((sale) => {
-                if (sale.id == itemId) {
-                    return sale.quantity > 1 && { ...sale, quantity: sale.quantity - 1 }
-                }
-                return sale
-            })
-            .filter((item) => item)
-
-        setCurrentSale(newSale)
-    }
-
     return (
         <StyledCart ulHeight={ulHeight}>
             <div>
@@ -41,7 +28,12 @@ export function CartList({ currentSale, setCurrentSale }) {
                 <>
                     <ul ref={ulRef}>
                         {currentSale.map((item) => (
-                            <CartItem key={item.id} item={item} removeCartItem={removeCartItem} />
+                            <CartItem
+                                key={item.id}
+                                item={item}
+                                setCurrentSale={setCurrentSale}
+                                currentSale={currentSale}
+                            />
                         ))}
                     </ul>
                     <CartPrice cartTotal={cartTotal} setCurrentSale={setCurrentSale} />

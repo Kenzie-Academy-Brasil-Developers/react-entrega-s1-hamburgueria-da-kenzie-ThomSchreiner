@@ -15,7 +15,7 @@ export const StyledCartItem = styled.li`
         border-radius: 5px;
     }
 
-    div {
+    & > div {
         display: flex;
         flex-direction: column;
         justify-content: space-around;
@@ -35,6 +35,25 @@ export const StyledCartItem = styled.li`
     .div-counter {
         align-items: center;
         flex: 0 0 auto;
+
+        div {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 4px;
+            border-radius: 5px;
+            border: 2px solid var(--grey-20);
+
+            button {
+                width: 24px;
+                height: 24px;
+                font-size: 17px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
     }
 
     button {
